@@ -1,0 +1,33 @@
+﻿@model IEnumerable<UzduotisPraktikos.Context.Pareigo>
+
+@{
+    ViewBag.Title = "Pareigos";
+}
+
+<h2>Pareigos</h2>
+
+
+<p>
+    @Html.ActionLink("Nauja Pareiga", "Create") |
+    @Html.ActionLink("Visos Pareigos", "Index") |
+    @Html.ActionLink("Priskirti Pareigas", "Create", "DarbuotojoPareigas")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Pavadinimas)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pavadinimas)
+        </td>
+        <td>
+        </td>
+    </tr>
+}
+
+</table>

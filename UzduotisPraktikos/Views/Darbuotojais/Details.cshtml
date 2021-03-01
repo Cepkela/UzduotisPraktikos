@@ -1,0 +1,58 @@
+﻿@model UzduotisPraktikos.Context.Darbuotojai
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Darbuotojai</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vardas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vardas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pavarde)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pavarde)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GimimoData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GimimoData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aktyvus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aktyvus)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

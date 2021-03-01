@@ -1,0 +1,34 @@
+﻿@model UzduotisPraktikos.Context.DarbuotojoPareiga
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DarbuotojoPareiga</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Darbuotojai.Vardas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Darbuotojai.Vardas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pareigo.Pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pareigo.Pavadinimas)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

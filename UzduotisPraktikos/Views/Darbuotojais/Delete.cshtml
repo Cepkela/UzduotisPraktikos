@@ -1,0 +1,64 @@
+﻿@model UzduotisPraktikos.Context.Darbuotojai
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Darbuotojai</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Vardas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Vardas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Pavarde)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pavarde)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GimimoData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GimimoData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adresas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adresas)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Aktyvus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Aktyvus)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

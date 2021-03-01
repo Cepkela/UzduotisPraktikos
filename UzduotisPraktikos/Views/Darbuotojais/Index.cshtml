@@ -1,0 +1,61 @@
+﻿@model IEnumerable<UzduotisPraktikos.Context.Darbuotojai>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Sarasas</h2>
+
+<p>
+    @Html.ActionLink("Naujas Darbuotojas", "Create") |
+    @Html.ActionLink("Aktyvus darbuotojai", "DarbuotojuSarasas") |
+    @Html.ActionLink("Ne aktyvus darbuotojai", "NeaktyviuDarbuotojuSarasas") |
+    @Html.ActionLink("Visi Darbuotojai", "Index")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Vardas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pavarde)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GimimoData)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Adresas)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Aktyvus)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Vardas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pavarde)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GimimoData)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Adresas)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Aktyvus)
+        </td>
+        <td>
+            @Html.ActionLink("Pareigos", "DarbuotojoPareigos", "Pareigoes", new { id=item.ID }, null) |
+            @Html.ActionLink("Aktyvuoti", "AktyvuotiDarbuotoja", new { id=item.ID }) |
+            @Html.ActionLink("Deaktyvuoti", "DeaktyvuotiDarbuotoja", new { id=item.ID }) |
+            @Html.ActionLink("Redaguoti", "Edit", new { id=item.ID})
+        </td>
+    </tr>
+}
+
+</table>

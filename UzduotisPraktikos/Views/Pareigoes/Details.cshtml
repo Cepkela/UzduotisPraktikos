@@ -1,0 +1,25 @@
+﻿@model UzduotisPraktikos.Context.Pareigo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Pareigo</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pavadinimas)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pavadinimas)
+        </dd>
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.PareigosID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="d8c6d863006d4752b8bfcfae9289e66f" Name="Diagram1">
+        <EntityTypeShape EntityType="PraktikosDarbuotojaiModel.Darbuotojai" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="PraktikosDarbuotojaiModel.DarbuotojoPareiga" Width="1.5" PointX="3" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="PraktikosDarbuotojaiModel.Pareigo" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="PraktikosDarbuotojaiModel.FK__Darbuotoj__Darbu__2B3F6F97" ManuallyRouted="false" />
+        <AssociationConnector Association="PraktikosDarbuotojaiModel.FK__Darbuotoj__Parei__2A4B4B5E" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
